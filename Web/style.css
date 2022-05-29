@@ -1,0 +1,22 @@
+.inputrow{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.container{
+    margin-top: 15%;
+}
+
+.header{
+    font-size: 38;
+    /* align-self: center; */
+    text-align: center;
+    color: white;
+}
+
+#result{
+    color: white;
+    font-size: 24;
+    word-break: break-all;
+}

@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="./bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: #3a0ca3;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3 align-self-start"></div>
+        <div
+          class="col-6 align-self-center align-item-center justify-content-center"
+        >
+            <h1 class="header">Search</h1>
+          <div class="inputrow">
+            <input
+              id="input"
+              type="text"
+              style="width: 100%"
+              class="form-control"
+              placeholder="Enter query here"
+              aria-label="query"
+            />
+            <button type="button" class="btn btn-success" onclick="compute()">
+              Show Documents
+            </button>
+          </div>
+          <p></p>
+          <div id="result"></div>
+        </div>
+        <div class="col-3 align-self-end"></div>
+      </div>
+    </div>
+  </body>
+  <script src="/eel.js"></script>
+  <script>
+    function compute() {
+      console.log("H1");
+      var textbox = document.getElementById("input");
+      text = textbox.value;
+      eel.runQuery(text)((result) => {
+        console.log("result=> ", result);
+        document.getElementById("result").innerText = result;
+      });
+    }
+  </script>
+  <script
+    src="./bootstrap/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
